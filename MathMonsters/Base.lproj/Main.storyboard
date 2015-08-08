@@ -1,42 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BhP-bP-fuN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ztT-gT-5kY">
+        <!--Detail View Controller-->
+        <scene sceneID="gUX-mr-QkV">
             <objects>
-                <viewController id="u55-Ni-7pF" sceneMemberID="viewController">
+                <viewController id="bal-IB-GEd" customClass="DetailViewController" customModule="MathMonsters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2ev-zc-cw7"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZVa-SO-WSS"/>
+                        <viewControllerLayoutGuide type="top" id="L9p-M3-4YB"/>
+                        <viewControllerLayoutGuide type="bottom" id="YZW-wK-Wp7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qML-Lh-MUf">
+                    <view key="view" contentMode="scaleToFill" id="Kji-kx-RWs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj6-6o-2HE">
+                                <rect key="frame" x="256" y="289" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cj6-6o-2HE" firstAttribute="centerY" secondItem="Kji-kx-RWs" secondAttribute="centerY" id="BAH-1g-O6W"/>
+                            <constraint firstItem="Cj6-6o-2HE" firstAttribute="centerX" secondItem="Kji-kx-RWs" secondAttribute="centerX" id="dIf-9L-oUa"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ng9-VK-UVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaE-Ht-oEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="586"/>
+            <point key="canvasLocation" x="264" y="638"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="ckX-iJ-V5p">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="bea-NM-3Fx" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="bea-NM-3Fx" customClass="MasterViewController" customModule="MathMonsters" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eXn-gB-Xvc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2Qx-8t-gyY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="p9Y-w8-Lwl" style="IBUITableViewCellStyleDefault" id="2Qx-8t-gyY">
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Qx-8t-gyY" id="4TG-Pe-myM">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p9Y-w8-Lwl">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -73,7 +94,7 @@
                 <splitViewController id="BhP-bP-fuN" sceneMemberID="viewController">
                     <connections>
                         <segue destination="c51-ng-rYR" kind="relationship" relationship="masterViewController" id="boy-wW-Att"/>
-                        <segue destination="u55-Ni-7pF" kind="relationship" relationship="detailViewController" id="NnL-5j-vEo"/>
+                        <segue destination="bal-IB-GEd" kind="relationship" relationship="detailViewController" id="7I4-Yn-gGG"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnG-Uk-haz" userLabel="First Responder" sceneMemberID="firstResponder"/>
